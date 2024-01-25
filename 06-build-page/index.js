@@ -44,7 +44,7 @@ async function build() {
           });
 
           await readComponent.on('end', async () => {
-            templateData = templateData.replace(
+            templateData = templateData.replaceAll(
               '{{' + componentName + '}}',
               componentData
             );
